@@ -1,0 +1,32 @@
+// Ronald Symon Frota e Frota All Rights Reserved
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "AnimInstances/WarriorCharacterAnimInstance.h"
+#include "WarriorHeroAnimInstance.generated.h"
+
+/**
+ * 
+ */
+UCLASS()
+class GAS_STUDYPROJECT_API UWarriorHeroAnimInstance : public UWarriorCharacterAnimInstance
+{
+	GENERATED_BODY()
+	
+public:
+	virtual void NativeInitializeAnimation() override;
+	virtual void NativeThreadSafeUpdateAnimation(float DeltaSeconds) override;
+	
+protected:
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "AnimData | References")
+	AWarriorBaseCharacter* OwningHeroCharacter;
+	
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "AnimData | LocotionData")
+	bool bShouldEnterRelaxState;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AnimData | LocotionData")
+	float EnterRelaxStateThreshold = 5.f;
+	
+	float IdleElapsedTime;
+};

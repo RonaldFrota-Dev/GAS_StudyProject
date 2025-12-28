@@ -9,7 +9,9 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"Engine"
+				"Engine",
+				"EnhancedInput",
+				"GameplayAbilities"
 			]
 		}
 	],
@@ -20,7 +22,11 @@
 			"TargetAllowList": [
 				"Editor"
 			]
-		}, 
+		},
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		},
 		{
 			"Name": "ACLPlugin",
 			"Enabled": false

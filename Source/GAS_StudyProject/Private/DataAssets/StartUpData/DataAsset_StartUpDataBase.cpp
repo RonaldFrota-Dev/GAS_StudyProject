@@ -1,12 +1,10 @@
 // Ronald Symon Frota e Frota All Rights Reserved
 
-
 #include "DataAssets/StartUpData/DataAsset_StartUpDataBase.h"
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
 #include "AbilitySystem/Abilities/WarriorGameplayAbility.h"
 
-void UDataAsset_StartUpDataBase::GiveToAbilitySystemComponent(UWarriorAbilitySystemComponent* InAscToGive,
-                                                              int32 ApplyLevel) const
+void UDataAsset_StartUpDataBase::GiveToAbilitySystemComponent(UWarriorAbilitySystemComponent* InAscToGive, int32 ApplyLevel) const
 {
 	check(InAscToGive);
 	
@@ -14,8 +12,7 @@ void UDataAsset_StartUpDataBase::GiveToAbilitySystemComponent(UWarriorAbilitySys
 	GrantAbilities(ReactiveAbilities, InAscToGive, ApplyLevel);
 }
 
-void UDataAsset_StartUpDataBase::GrantAbilities(const TArray<TSubclassOf<UWarriorGameplayAbility>>& InAbilitiesToGive,
-	UWarriorAbilitySystemComponent* InAscToGive, int32 ApplyLevel) const
+void UDataAsset_StartUpDataBase::GrantAbilities(const TArray<TSubclassOf<UWarriorGameplayAbility>>& InAbilitiesToGive, UWarriorAbilitySystemComponent* InAscToGive, int32 ApplyLevel) const
 {
 	if (InAbilitiesToGive.IsEmpty())
 	{

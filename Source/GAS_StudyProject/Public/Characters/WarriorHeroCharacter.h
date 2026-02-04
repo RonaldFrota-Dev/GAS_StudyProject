@@ -7,6 +7,7 @@
 #include "GameplayTagContainer.h"
 #include "WarriorHeroCharacter.generated.h"
 
+class UHeroUIComponent;
 class UDataAsset_InputConfig;
 class UCameraComponent;
 class USpringArmComponent;
@@ -20,6 +21,15 @@ class GAS_STUDYPROJECT_API AWarriorHeroCharacter : public AWarriorBaseCharacter
 	
 public:
 	AWarriorHeroCharacter();
+	
+	// Begin IPawnCombatComponent Interface
+	virtual UPawnCombatComponent* GetPawnCombatComponent() const override;
+	// End IPawnCombatComponent Interface
+	
+	// Begin IPawnUIComponent Interface
+	virtual UPawnUIComponent* GetPawnUIComponent() const override;
+	virtual UHeroUIComponent* GetHeroUIComponent() const override;
+	// End IPawnUIComponent Interface
 	
 protected:
 	// Begin APawn Interface
@@ -40,6 +50,9 @@ private:
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	UHeroCombatComponent* HeroCombatComponent;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI", meta = (AllowPrivateAccess = "true"))
+	UHeroUIComponent* HeroUIComponent;
 	
 #pragma endregion Components
 

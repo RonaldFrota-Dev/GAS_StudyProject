@@ -12,7 +12,8 @@
 				"Engine",
 				"EnhancedInput",
 				"GameplayAbilities",
-				"UMG"
+				"UMG",
+				"AIModule"
 			]
 		}
 	],
@@ -31,6 +32,10 @@
 		{
 			"Name": "ACLPlugin",
 			"Enabled": false
+		},
+		{
+			"Name": "MotionWarping",
+			"Enabled": true
 		}
 	]
 }

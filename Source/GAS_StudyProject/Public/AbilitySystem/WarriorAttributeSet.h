@@ -14,9 +14,7 @@ GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
 GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
 
 class IPawnUIInterface;
-/**
- * 
- */
+
 UCLASS()
 class GAS_STUDYPROJECT_API UWarriorAttributeSet : public UAttributeSet
 {

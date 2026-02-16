@@ -9,9 +9,7 @@
 class UWidgetComponent;
 class UEnemyUIComponent;
 class UEnemyCombatComponent;
-/**
- * 
- */
+
 UCLASS()
 class GAS_STUDYPROJECT_API AWarriorEnemyCharacter : public AWarriorBaseCharacter
 {
